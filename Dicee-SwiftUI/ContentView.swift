@@ -17,25 +17,33 @@ struct ContentView: View {
             
             VStack {
                 Image("diceeLogo") // dicee logo image
+
                 
-                // Dice images for game
+                // MARK: Dice images for game
                 HStack {
                     DiceView(n: 1)// 1st dice image
                     DiceView(n: 1)// 2nd dice image
                 }
                 .padding(.horizontal)
                 
-                // Button for run
-                Button(action: {}){
-                    Text("")
-                }
                 
+                // MARK: Button and it's action
+                Button(action: {}){
+                    
+                    Text("Roll") // button text
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                }
+                .background(Color.red) // Button color
             }
         }
     }
 }
 
-//dice images view for game
+
+// MARK: Dice images view for game
 struct DiceView: View {
     
     let n: Int// dice image number
@@ -46,6 +54,7 @@ struct DiceView: View {
             .aspectRatio(1, contentMode: .fit)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
