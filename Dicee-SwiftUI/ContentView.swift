@@ -17,14 +17,17 @@ struct ContentView: View {
             
             VStack {
                 Image("diceeLogo") // dicee logo image
-
+                Spacer() // add automatic space
                 
+
                 // MARK: Dice images for game
                 HStack {
                     DiceView(n: 1)// 1st dice image
                     DiceView(n: 1)// 2nd dice image
                 }
                 .padding(.horizontal)
+                Spacer() // add automatic space
+
                 
                 
                 // MARK: Button and it's action
@@ -37,6 +40,7 @@ struct ContentView: View {
                         .padding(.horizontal)
                 }
                 .background(Color.red) // Button color
+                Spacer() // add automatic space
             }
         }
     }
@@ -52,6 +56,7 @@ struct DiceView: View {
         Image("dice\(n)")  // dice image for game
             .resizable()
             .aspectRatio(1, contentMode: .fit)
+            .padding() // add pading to give some space amoung the contains
     }
 }
 
