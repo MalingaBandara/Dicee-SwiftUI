@@ -26,12 +26,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 //dice images view for game
 struct DiceView: View {
     var body: some View {
@@ -39,5 +33,11 @@ struct DiceView: View {
         Image("dice1")  // dice image for game
             .resizable()
             .aspectRatio(1, contentMode: .fit)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
