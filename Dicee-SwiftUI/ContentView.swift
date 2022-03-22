@@ -14,12 +14,15 @@ struct ContentView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             
+            
             VStack {
-                
                 Image("diceeLogo") // dicee logo image
                 
                 // Dice images for game
-                DiceView() // 1st dice image
+                HStack {
+                    DiceView(n: 1)// 1st dice image
+                    DiceView(n: 1)// 2nd dice image
+                } 
                 
             }
         }
