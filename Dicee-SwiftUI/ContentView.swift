@@ -13,6 +13,15 @@ struct ContentView: View {
             Image("background") // add the background
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("diceeLogo") // dicee logo image
+                
+                Image("dice1")  // 1st dice image for game
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                
+            }
         }
     }
 }
