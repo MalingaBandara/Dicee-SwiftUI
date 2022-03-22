@@ -28,9 +28,11 @@ struct ContentView: View {
 
 //dice images view for game
 struct DiceView: View {
+    
+    let n: Int// dice image number
+    
     var body: some View {
-        
-        Image("dice1")  // dice image for game
+        Image("dice\(n)")  // dice image for game
             .resizable()
             .aspectRatio(1, contentMode: .fit)
     }
