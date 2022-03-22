@@ -22,7 +22,13 @@ struct ContentView: View {
                 HStack {
                     DiceView(n: 1)// 1st dice image
                     DiceView(n: 1)// 2nd dice image
-                } 
+                }
+                .padding(.horizontal)
+                
+                // Button for run
+                Button(action: {}){
+                    Text("")
+                }
                 
             }
         }
