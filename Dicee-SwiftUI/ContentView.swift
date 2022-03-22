@@ -15,11 +15,11 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                
                 Image("diceeLogo") // dicee logo image
                 
-                Image("dice1")  // 1st dice image for game
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fit)
+                // Dice images for game
+                DiceView() // 1st dice image
                 
             }
         }
@@ -29,5 +29,15 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+//dice images view for game
+struct DiceView: View {
+    var body: some View {
+        
+        Image("dice1")  // dice image for game
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
     }
 }
