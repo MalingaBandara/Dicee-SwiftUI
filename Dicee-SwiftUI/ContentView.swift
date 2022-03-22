@@ -12,7 +12,7 @@ struct ContentView: View {
         ZStack{
             Image("background") // add the background
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
