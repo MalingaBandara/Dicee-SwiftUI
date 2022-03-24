@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var leftDiceNumber = 1 // Left Dice Face Image Number
+     var rightDiceNUmber = 1// Left Dice Face Image Number
+    
     var body: some View {
+        
         ZStack{
             Image("background") // add the background
                 .resizable()
@@ -22,8 +27,8 @@ struct ContentView: View {
 
                 // MARK: Dice images for game
                 HStack {
-                    DiceView(n: 1)// 1st dice image
-                    DiceView(n: 1)// 2nd dice image
+                    DiceView(n: leftDiceNumber)// 1st dice image
+                    DiceView(n: rightDiceNUmber)// 2nd dice image
                 }
                 .padding(.horizontal)
                 Spacer() // add automatic space
@@ -31,7 +36,10 @@ struct ContentView: View {
                 
                 
                 // MARK: Button and it's action
-                Button(action: {}){
+                Button(action: {
+                    self.leftDiceNumber = Int.random(in: 1...6) // set a number change when button click
+                    
+                }){
                     
                     Text("Roll") // button text
                         .font(.system(size: 50))
