@@ -38,6 +38,7 @@ struct ContentView: View {
                 // MARK: Button and it's action
                 Button(action: {
                     self.leftDiceNumber = Int.random(in: 1...6) // set a number change when button click
+                    self.rightDiceNUmber = Int.random(in: 1...6)// set a number change when button click
                     
                 }){
                     
