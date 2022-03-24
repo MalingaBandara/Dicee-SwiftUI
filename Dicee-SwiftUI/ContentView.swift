@@ -22,7 +22,7 @@ struct ContentView: View {
             
             VStack {
                 Image("diceeLogo") // dicee logo image
-                Spacer() // add automatic space
+                Spacer() // add automatic space 
                 
 
                 // MARK: Dice images for game
